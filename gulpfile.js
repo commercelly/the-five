@@ -10,7 +10,7 @@ const browserSync = require('browser-sync');
 
 let path = {
     src_sass:'./src/scss/*.scss',
-    src_js:'./src/js/main.js',
+    src_js:'./src/js/theme.js',
 }
 
 gulp.task("sassTask", function() {
@@ -19,7 +19,7 @@ gulp.task("sassTask", function() {
         .pipe(sourcemaps.init()) // initialize sourcemaps first
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-        .pipe(gulp.dest('./assets'))
+        .pipe(gulp.dest('./assets/css'))
         .pipe(browserSync.stream());
 });
 
@@ -30,16 +30,12 @@ gulp.task('jsTask', function() {
       .pipe(sourcemaps.init())
       .pipe(uglify())
       .pipe(sourcemaps.write()) // Inline source maps.
-      .pipe(gulp.dest('./assets'))
+      .pipe(gulp.dest('./assets/js'))
       .pipe(browserSync.stream());
   });
 
 // Static Server & watching scss/js/html files
 gulp.task('serve', gulp.series('sassTask', function() {
-    browserSync.init({
-        server: "./"   
-    });
-  
     gulp.watch(path.src_sass,
       gulp.series('sassTask'));
 
