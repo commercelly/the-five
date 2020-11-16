@@ -54,7 +54,13 @@ global_settings:
    to_enable:
      - ps_linklist
   hooks:
+    custom_hooks:
+      - name: displayMenu
+        title: displayMenu
+        description: Display main menu
     modules_to_hook:
+      displayMenu:
+        - ps_mainmenu
       displayNav1:
         - ps_contactinfo
       displayNav2:
@@ -63,7 +69,6 @@ global_settings:
         - ps_customersignin
         - ps_shoppingcart
       displayTop:
-        - ps_mainmenu
         - ps_searchbar
       displayHome:
         - ps_imageslider
