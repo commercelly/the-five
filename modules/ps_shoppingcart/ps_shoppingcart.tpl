@@ -33,7 +33,7 @@
         <svg class="h4 mb-0" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bag" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z"/>
         </svg>
-        <span class="cart-products-count position-absolute small top-20 left-80 translate-middle badge rounded-pill border border-danger py-1 fw-normal bg-danger ">{$cart.products_count}</span>
+        <p class="cart-products-count position-absolute small top-20 left-80 translate-middle badge rounded-pill border border-primary fw-normal bg-primary "><span class="small py-0">{$cart.products_count}</span></p>
       </figure>
 
         <span class="hidden-sx-down small"><p class="small">{l s='Cart' d='Shop.Theme.Checkout'}</small></span>

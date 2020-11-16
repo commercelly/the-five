@@ -47,7 +47,7 @@
 
 {block name='header_top'}
   <div class="header-top">
-    <div class="container">
+    <div class="container mt-3 mb-3">
        <div class="row">
         <div class="col-md-3 hidden-sm-down" id="_desktop_logo">
             {if $page.page_name == 'index'}
@@ -65,7 +65,7 @@
         <div class="col-md-6 col-sm-12 position-static">
           {hook h='displayTop'}
         </div>
-        <div class="col-md-3 d-flex flex-row bd-highlight">
+        <div class="col-md-3 d-flex flex-row bd-highlight align-items-end">
         {hook h='displayNav2'}
         </div>
       </div>
