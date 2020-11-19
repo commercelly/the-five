@@ -65,7 +65,7 @@
         <div class="col-md-6 col-sm-12 position-static">
           {hook h='displayTop'}
         </div>
-        <div class="col-md-3 d-flex flex-row bd-highlight align-items-end">
+        <div class="col-md-3 d-flex flex-row bd-highlight justify-content-end">
         {hook h='displayNav2'}
         </div>
       </div>
