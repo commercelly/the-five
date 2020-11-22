@@ -26,7 +26,7 @@
   <h2 class="h2 products-section-title py-4">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </h2>
-  <div class="products row row-cols-1 row-cols-md-4 g-2 g-md-4">
+  <div class="products position-relative row row-cols-1 row-cols-md-4 g-2 g-md-4">
     {foreach from=$products item="product"}
       {include file="catalog/_partials/miniatures/product.tpl" product=$product}
     {/foreach}

@@ -26,23 +26,24 @@
   <div class="row">
   {foreach $linkBlocks as $linkBlock}
     <div class="col-md-6 wrapper">
-      <p class="h3 hidden-sm-down">{$linkBlock.title}</p>
+      <p class="h5 hidden-sm-down">{$linkBlock.title}</p>
       {assign var=_expand_id value=10|mt_rand:100000}
-      <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_{$_expand_id}" data-toggle="collapse">
-        <span class="h3">{$linkBlock.title}</span>
+      <div class="title clearfix d-block d-sm-none" data-target="#footer_sub_menu_{$_expand_id}" data-toggle="collapse">
+        <span class="h5">{$linkBlock.title}</span>
         <span class="float-xs-right">
           <span class="navbar-toggler collapse-icons">
-            <i class="material-icons add">&#xE313;</i>
-            <i class="material-icons remove">&#xE316;</i>
+            <svg width="0.9em" height="0.9em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
           </span>
         </span>
       </div>
-      <ul id="footer_sub_menu_{$_expand_id}" class="collapse">
+      <ul id="footer_sub_menu_{$_expand_id}" class=" collapse show list-unstyled">
         {foreach $linkBlock.links as $link}
           <li>
             <a
                 id="{$link.id}-{$linkBlock.id}"
-                class="{$link.class}"
+                class="{$link.class} text-decoration-none link-light"
                 href="{$link.url}"
                 title="{$link.description}"
                 {if !empty($link.target)} target="{$link.target}" {/if}

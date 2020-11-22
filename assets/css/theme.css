@@ -3344,7 +3344,7 @@ textarea.form-control-lg {
     float: left;
     padding-right: 0.5rem;
     color: #6c757d;
-    content: "/"; }
+    content: ">"; }
 
 .breadcrumb-item.active {
   color: #6c757d; }
@@ -7348,5 +7348,18 @@ textarea.form-control-lg {
     display: inline-flex !important; }
   .d-print-none {
     display: none !important; } }
+
+.product-miniature .card .highlighted-informations {
+  display: none; }
+
+.product-miniature .card:hover {
+  z-index: 999;
+  position: absolute;
+  box-shadow: 0 1rem 2.4rem rgba(0, 0, 0, 0.19) !important;
+  transition: all ease 0.4s;
+  width: calc(inherit - 1rem);
+  height: auto !important; }
+  .product-miniature .card:hover .highlighted-informations {
+    display: block; }
 
 /*# sourceMappingURL=theme.css.map */

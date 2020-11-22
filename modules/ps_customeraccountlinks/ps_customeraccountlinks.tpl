@@ -24,28 +24,28 @@
  *}
 
 <div id="block_myaccount_infos" class="col-md-3 links wrapper">
-  <p class="h3 myaccount-title hidden-sm-down">
-    <a class="text-uppercase" href="{$urls.pages.my_account}" rel="nofollow">
-      {l s='Your account' d='Shop.Theme.Customeraccount'}
-    </a>
-  </p>
   <div class="title clearfix hidden-md-up" data-target="#footer_account_list" data-toggle="collapse">
-    <span class="h3">{l s='Your account' d='Shop.Theme.Customeraccount'}</span>
-    <span class="float-xs-right">
-      <span class="navbar-toggler collapse-icons">
-        <i class="material-icons add">&#xE313;</i>
-        <i class="material-icons remove">&#xE316;</i>
-      </span>
+    <p class="h5 hidden-sm-down">{l s='Your account' d='Shop.Theme.Customeraccount'}</p>
+    <span class="h5 d-block d-sm-none">{l s='Your account' d='Shop.Theme.Customeraccount'}</span>
+    <span class="float-xs-right d-block d-sm-none">
+          <span class="navbar-toggler collapse-icons">
+            <svg width="0.9em" height="0.9em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </span>
     </span>
   </div>
-  <ul class="account-list collapse" id="footer_account_list">
+  <ul class="account-list collapse show list-unstyled" id="footer_account_list">
     {foreach from=$my_account_urls item=my_account_url}
         <li>
-          <a href="{$my_account_url.url}" title="{$my_account_url.title}" rel="nofollow">
+          <a href="{$my_account_url.url}" title="{$my_account_url.title}" class="text-decoration-none link-light" rel="nofollow">
             {$my_account_url.title}
           </a>
         </li>
     {/foreach}
+        <li><a class="text-decoration-none link-light"  href="{$urls.pages.my_account}" rel="nofollow">
+          {l s='Your account' d='Shop.Theme.Customeraccount'}
+        </a></li>
     {hook h='displayMyAccountBlock'}
 	</ul>
 </div>

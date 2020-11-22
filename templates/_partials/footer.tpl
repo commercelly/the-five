@@ -22,16 +22,18 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="container">
-  <div class="row">
-    {block name='hook_footer_before'}
-      {hook h='displayFooterBefore'}
-    {/block}
-  </div>
-</div>
-<div class="footer-container">
+ <div class="bg-light">
   <div class="container">
-    <div class="row">
+    <div class="row p-5">
+      {block name='hook_footer_before'}
+        {hook h='displayFooterBefore'}
+      {/block}
+    </div>
+  </div>
+ </div>
+<div class="footer-container bg-dark text-light">
+  <div class="container">
+    <div class="row p-5">
       {block name='hook_footer'}
         {hook h='displayFooter'}
       {/block}

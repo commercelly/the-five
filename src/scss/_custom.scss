@@ -1,0 +1,21 @@
+@import "bootstrap/bootstrap";
+
+.product-miniature .card {
+
+    .highlighted-informations {
+        display: none;
+    }
+
+    &:hover {
+        z-index: 999;
+        position: absolute;
+        box-shadow: 0 1rem 2.4rem rgba(0,0,0,.19)!important;
+        transition: all ease 0.4s;
+        width: calc(inherit - 1rem);
+        height: auto !important;
+
+        .highlighted-informations {
+            display: block;
+        }
+    }
+}

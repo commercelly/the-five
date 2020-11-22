@@ -24,11 +24,11 @@
  *}
 {if $elements}
   <div id="block-reassurance">
-    <ul>
+    <ul class="list-unstyled">
       {foreach from=$elements item=element}
         <li>
-          <div class="block-reassurance-item">
-            <img src="{$element.image}" alt="{$element.text}">
+          <div class="block-reassurance-item small mb-2">
+            <img src="{$element.image}" alt="{$element.text}" class="mr-2">
             <span class="h6">{$element.text}</span>
           </div>
         </li>

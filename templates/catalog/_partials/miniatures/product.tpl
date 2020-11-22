@@ -23,7 +23,8 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='product_miniature_item'}
-  <article class="product-miniature col p-0 card js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+  <article class="product-miniature col js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+    <div class="p-0 card h-100">
     <div class="thumbnail-container">
       <div class="position-relative">
         {block name='product_thumbnail'}
@@ -106,6 +107,7 @@
           {/if}
         {/block}
       </div>
+    </div>
     </div>
   </article>
 {/block}

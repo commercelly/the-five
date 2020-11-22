@@ -59,9 +59,9 @@
             {block name='page_content'}
               <!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
               {block name='product_flags'}
-                <ul class="product-flags">
+                <ul class="product-flags list-unstyled">
                   {foreach from=$product.flags item=flag}
-                    <li class="product-flag {$flag.type}">{$flag.label}</li>
+                    <li class="product-flag {$flag.type} badge bg-primary">{$flag.label}</li>
                   {/foreach}
                 </ul>
               {/block}
@@ -81,17 +81,19 @@
         <div class="col-md-6">
           {block name='page_header_container'}
             {block name='page_header'}
-              <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+              <h1 class="h3" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
             {/block}
           {/block}
+
+          {block name='product_description_short'}
+            <div id="product-description-short-{$product.id}" class="h2 lead" itemprop="description">{$product.description_short nofilter}</div>
+          {/block}
+
           {block name='product_prices'}
             {include file='catalog/_partials/product-prices.tpl'}
           {/block}
 
           <div class="product-information">
-            {block name='product_description_short'}
-              <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
-            {/block}
 
             {if $product.is_customizable && count($product.customizations.fields)}
               {block name='product_customization'}
